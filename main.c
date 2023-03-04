@@ -138,27 +138,27 @@ void first_login(){
     srand(time(NULL));
 	puts("");
 	branco();
-    printf("\t\t\t\t\t\t\t\t\t\t\t\t\ B");branco();printf("E" );ciano();printf("M" );roxo();printf(" " );
+    printf("\t\t\t\t\t\t\t\t\t\t\t\t B");branco();printf("E" );ciano();printf("M" );roxo();printf(" " );
     printf("V");vermelho();printf("I");azul();printf("N");verde();printf("D");laranja();printf("O");
 				printf("!\n");branco();
 												
 	puts("");			
         bege();
-        printf("\t\t\t\t\t\t\t\                           .--. .-...-.             .---.\n");
+        printf("\t\t\t\t\t\t\t                     .--. .-...-.             .---.\n");
         branco();
-	printf("\t\t\t\t\t\t\t\                       .---|__||       |    .-.     |~~~|\n");
+	printf("\t\t\t\t\t\t\t                       .---|__||       |    .-.     |~~~|\n");
 	bege();
-	printf("\t\t\t\t\t\t\t\                    .--|===|--||*******|    |_|     |~~~|--.\n");
-	printf("\t\t\t\t\t\t\t\                    |--|===|  ||*******|.---!~|...--|WAR|--|\n");
+	printf("\t\t\t\t\t\t\t                    .--|===|--||*******|    |_|     |~~~|--.\n");
+	printf("\t\t\t\t\t\t\t                    |--|===|  ||*******|.---!~|...--|WAR|--|\n");
 	branco();
-	printf("\t\t\t\t\t\t\t\                    |  |$$$|  ||       ||===| |--|  |ON |  |\n");
-	printf("\t\t\t\t\t\t\t\                    |  |   |  ||Art of ||   | |__|  |DRU|  |\n");
-	printf("\t\t\t\t\t\t\t\                    |  |   |  || Code *||===| |==|  | GS|++|\n");
+	printf("\t\t\t\t\t\t\t                    |  |$$$|  ||       ||===| |--|  |ON |  |\n");
+	printf("\t\t\t\t\t\t\t                    |  |   |  ||Art of ||   | |__|  |DRU|  |\n");
+	printf("\t\t\t\t\t\t\t                    |  |   |  || Code *||===| |==|  | GS|++|\n");
 	bege();
-	printf("\t\t\t\t\t\t\t\                    |  |   |__||_______||   |_|  |  |~~~|__|\n");
-	printf("\t\t\t\t\t\t\t\                    |--|===|--||       ||===|~|--|  |~~~|--|\n");
+	printf("\t\t\t\t\t\t\t                    |  |   |__||_______||   |_|  |  |~~~|__|\n");
+	printf("\t\t\t\t\t\t\t                    |--|===|--||       ||===|~|--|  |~~~|--|\n");
 	branco();
-	printf("\t\t\t\t\t\t\t\                    `--^---'--'----------^-^--^--^---'--'---\n");	
+	printf("\t\t\t\t\t\t\t                    `--^---'--'----------^-^--^--^---'--'---\n");	
         print_quote();
 	
     if(login() == 0) return;
