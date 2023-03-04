@@ -450,15 +450,15 @@ void new_user(void){
     
     if(idade >= 18){
       
-    printf("\n\nInforme um nome de usuário ");
+    printf("\nInforme um nome de usuário ");
     fgets(newAccount.name, sizeof(newAccount.name), stdin);
     strcpy(newAccount.name, removeSpecial_chars(newAccount.name));  
 
-    printf("\Informe o nº RG ou CPF ");
+    printf("\nInforme o nº RG ou CPF ");
     fgets(newAccount.ic, sizeof(newAccount.ic), stdin);
     strcpy(newAccount.ic, removeSpecial_chars(newAccount.ic));
     
-    printf("\Informe o email p/ contato ");
+    printf("\nInforme o email p/ contato ");
     fgets(newAccount.email, sizeof(newAccount.email), stdin);
     strcpy(newAccount.email, removeSpecial_chars(newAccount.email));
 
