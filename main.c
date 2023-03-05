@@ -43,7 +43,7 @@ int login()
 {
     char pwdIn_file[MAX_LEN] = {'\0'};
     char inputPwd[MAX_LEN] = {'\0'};
-
+    verde();
     printf("\nDigite a senha : ");
     int c = 0, ch;
     while ((ch = getch()) != '\r') {
@@ -54,6 +54,7 @@ int login()
             }
         } else {
             inputPwd[c++] = ch;
+	    ciano();
             printf("*");
         }
     }
@@ -90,23 +91,23 @@ int login()
 void print_quote() {
  
      char *quotes[] = {
-					    "Um livro é um sonho que você segura com as mãos. - Neil Gaiman",
+					  "Um livro é um sonho que você segura com as mãos. - Neil Gaiman",
 					    
-					    "Livros não mudam o mundo, quem muda o mundo são as pessoas. Os livros só mudam as pessoas. - Mário Quintana",
+					  "Livros não mudam o mundo, quem muda o mundo são as pessoas. Os livros só mudam as pessoas. - Mário Quintana",
 					
-					    "Os livros não mudam o mundo, quem muda o mundo são as pessoas. Os livros só mudam as pessoas. - José Saramago",
+					  "Os livros não mudam o mundo, quem muda o mundo são as pessoas. Os livros só mudam as pessoas. - José Saramago",
 						
-					    "O livro é uma extensão da memória e da imaginação humana.- Jorge Luis Borges",
+					  "O livro é uma extensão da memória e da imaginação humana.- Jorge Luis Borges",
 						
-					    "Ler é viajar, é conhecer novos mundos, novas realidades, novas formas de pensar e de sentir. - Mia Couto",
+					  "Ler é viajar, é conhecer novos mundos, novas realidades, novas formas de pensar e de sentir. - Mia Couto",
 						
-				           "A leitura é uma fonte inesgotável de prazer, mas, por incrível que pareça, a quase totalidade não sente esta sede. - Carlos Drummond de Andrade",
+				          "A leitura é uma fonte inesgotável de prazer, mas, por incrível que pareça, a quase totalidade não sente esta sede. - Carlos Drummond de Andrade",
 						
-					   "Livros são os mais silenciosos e constantes amigos; os mais acessíveis e sábios conselheiros; e os mais pacientes professores. - Charles W. Eliot",
+					  "Livros são os mais silenciosos e constantes amigos; os mais acessíveis e sábios conselheiros; e os mais pacientes professores. - Charles W. Eliot",
 						
-					   "Ler é como viajar sem sair do lugar. É ver, sentir e experimentar o mundo através das palavras. - Cecília Meireles",
+					  "Ler é como viajar sem sair do lugar. É ver, sentir e experimentar o mundo através das palavras. - Cecília Meireles",
 						
-					   "Livros são tesouros que enriquecem a alma, a mente e o coração. - Rubem Alves",
+					  "Livros são tesouros que enriquecem a alma, a mente e o coração. - Rubem Alves",
 						
 					  "O livro é um objeto mágico capaz de mudar nossas vidas e nos transportar para outros universos. - José Eduardo Agualusa",
 
@@ -138,13 +139,13 @@ void first_login(){
     srand(time(NULL));
 	puts("");
 	branco();
-    printf("\t\t\t\t\t\t\t\t\t\t\t\t B");branco();printf("E" );ciano();printf("M" );roxo();printf(" " );
-    printf("V");vermelho();printf("I");azul();printf("N");verde();printf("D");laranja();printf("O");
+        printf("\t\t\t\t\t\t\t\t\t\t\t\t B");branco();printf("E" );ciano();printf("M" );roxo();printf(" " );
+        printf("V");vermelho();printf("I");azul();printf("N");verde();printf("D");laranja();printf("O");
 				printf("!\n");branco();
 												
 	puts("");			
         bege();
-        printf("\t\t\t\t\t\t\t                     .--. .-...-.             .---.\n");
+        printf("\t\t\t\t\t\t\t                           .--. .-...-.             .---.\n");
         branco();
 	printf("\t\t\t\t\t\t\t                       .---|__||       |    .-.     |~~~|\n");
 	bege();
@@ -163,8 +164,7 @@ void first_login(){
 	
     if(login() == 0) return;
         puts("");
-        loadAnima();
-  
+        loadAnima();  
 }
 
 int checkFile(FILE *pFile, char fPath[]);
@@ -207,7 +207,6 @@ typedef struct booksInfo{
     float rentValue_perDay;
 } book;
 
-
 void head(){
     printf("\n\n");
     printf("\033[36m\t\t\t\t\t                                        \n");
@@ -240,14 +239,11 @@ int main(void){
     int back, diadev, mesdev, anodev; 
     int option1, option2;
     bool backToOption1 = false;
-    first_login();
-   	
-    head();
-    
+    first_login();	
+    head();    
     azul();
     puts("");
-    bege();
-   
+    bege(); 
     puts("");
     bege();
     do{
@@ -295,9 +291,7 @@ int main(void){
                        	  break; 	  
                           case 7: {
 													    								  
-                                    while (!backToOption1){
-									    
-									                               
+                                    while (!backToOption1){									    								                               
                                     printf("\n\t\t\t\t\t\t\t\t\t   ______________________________________ \n");
                                     ciano();
 								    printf("\n\t\t\t\t\t\t\t\t\t           [*] MENU SECUNDÁRIO [*]        \n");
@@ -309,10 +303,10 @@ int main(void){
 								    printf("\n\t\t\t\t\t\t\t\t\t ¦ [4] Retornar p/ menu principal        ¦\n");
 								    printf("\n\t\t\t\t\t\t\t\t\t ¦---------------------------------------¦\n");
 								    printf("\n\t\t\t\t\t\t\t\t\t         ***Escolha uma operação***       \n");
-			                        printf("\n\t\t\t\t\t\t\t\t\t  ______________________________________  \n");
-								  	scanf("%d",&option2);
-											fflush(stdin);
-							               switch(option2){
+			                                            printf("\n\t\t\t\t\t\t\t\t\t  ______________________________________  \n");
+								    scanf("%d",&option2);
+								    fflush(stdin);
+							            switch(option2){
 										                      case 1:
 	    
 													        showRent();
@@ -325,20 +319,19 @@ int main(void){
 													     	                  break;													     	                  
 													                          case 4 :
 													                          														         
-													 	    printf("\nRetornando.. ");                	
-															backToOption1 = true; 
-															
-															            	  
-															              	  break;
+													 	printf("\nRetornando.. ");                	
+														backToOption1 = true; 
+														  	  
+															          break;
 															              	  
 													                       	  default:
-                                                                              printf("\nOpção Inválida");
+                                                                                                                printf("\nOpção Inválida");
                                                                           }
                                                                              
                                                          }
                
         system("timeout 2");
-   	   backToOption1 = false;                  	
+   	backToOption1 = false;                  	
 }
                           break;
 						  case 8:
@@ -351,8 +344,8 @@ int main(void){
 		puts("Até Logo..");                              
 		system("timeout 1");
 		exit(0);                  			           
-                                                                              default:
-                                                                              printf("\nOpção Inválida");
+                                                  default:
+                                                  printf("\nOpção Inválida");
                                                                           	   	      
 }
      
@@ -409,10 +402,9 @@ int amountOf_inFile(FILE *pFile, char fPath[]){
     if(checkFile(pFile, fPath) == 1){
         pFile = fopen(fPath, "r");
 
-        while(fgets(line, MAX_LEN, pFile) != NULL)
-            amountOf_lines++;
-
-        fclose(pFile);
+    while(fgets(line, MAX_LEN, pFile) != NULL)
+    amountOf_lines++;
+    fclose(pFile);
     }
 
     return amountOf_lines;
@@ -444,7 +436,7 @@ void new_user(void){
         return;
     }
 
-     printf("\nInforme a idade : ");
+    printf("\nInforme a idade : ");
     scanf("%i",&idade);
     fflush(stdin);
     
@@ -594,8 +586,7 @@ void addRent(void){
 
     pBooks = fopen(BOOKS_FPATH, "r");
     lineCounter = 0;
-    while ( fscanf( pBooks, "%s %s %s %s %f", &bookList.title, &bookList.author, & bookList.genres, &bookList.date, &bookList.rentValue_perDay) != EOF)
-    {
+    while ( fscanf( pBooks, "%s %s %s %s %f", &bookList.title, &bookList.author, & bookList.genres, &bookList.date, &bookList.rentValue_perDay) != EOF){
         lineCounter++;      
         if(lineCounter == bookNum_toRent){
             strcpy(newRent.title, bookList.title);
@@ -605,7 +596,6 @@ void addRent(void){
     fclose(pBooks);
 
     checkFile(pRents, RENTS_FPATH); 
-
     pRents = fopen(RENTS_FPATH, "a");
     fprintf(pRents, "%s %s %s %d %.2f\n", newRent.name, newRent.ic, newRent.title, 
     newRent.amountOf_daysRented, newRent.totalTo_pay);
@@ -615,21 +605,13 @@ void addRent(void){
     pTemp = fopen(TEMPF_PATH, "w"); 
     lineCounter = 0; 
 
-    while 
-    (
-        fscanf(pAccounts, "%s %s %d %f", &accountList.name, &accountList.ic, 
-        &accountList.amountOf_rents, &accountList.moneyTo_pay) != EOF
-    )
-    {
+    while(fscanf(pAccounts, "%s %s %d %f", &accountList.name, &accountList.ic, &accountList.amountOf_rents, &accountList.moneyTo_pay) != EOF){
         lineCounter++; 
-
-        if(lineCounter == accountNum_toRent)
-        {
+        if(lineCounter == accountNum_toRent){
             fprintf(pTemp, "%s %s %d %.2f\n", accountList.name, accountList.ic, 
             accountList.amountOf_rents + 1, accountList.moneyTo_pay + newRent.totalTo_pay);
         }
-        else
-        {
+        else{
             fprintf(pTemp, "%s %s %d %.2f\n", accountList.name, accountList.ic, 
             accountList.amountOf_rents, accountList.moneyTo_pay);
         }
@@ -690,7 +672,6 @@ void addBooks(void){
     }
 
     checkFile(pBooks, BOOKS_FPATH); 
-
     pBooks = fopen(BOOKS_FPATH, "a");
     fprintf(pBooks, "%s %s %s %s %.2f\n", newBook_toAdd.title, newBook_toAdd.author, 
     newBook_toAdd.genres, newBook_toAdd.date, newBook_toAdd.rentValue_perDay);
@@ -698,7 +679,6 @@ void addBooks(void){
 
     printf("\nAdicionado com sucesso!");
 }
-
 
 void removeRent(void){
     rent inFile;
@@ -816,9 +796,9 @@ void showRent(void){
     pRents = fopen(RENTS_FPATH, "r");
     while ( fscanf(pRents, "%s %s %s %d %f", &inFile.name, &inFile.ic, &inFile.title, &inFile.amountOf_daysRented, &inFile.totalTo_pay) != EOF ){
         lineCounter++;
-        printf("\n\n\t%d) Nome: %s - Documento id: %s - Título: %s - Dias: %d - Total á pagar: R$%.2f",
-        lineCounter, inFile.name, inFile.ic, inFile.title, inFile.amountOf_daysRented, 
-        inFile.totalTo_pay);               
+    printf("\n\n\t%d) Nome: %s - Documento id: %s - Título: %s - Dias: %d - Total á pagar: R$%.2f",
+    lineCounter, inFile.name, inFile.ic, inFile.title, inFile.amountOf_daysRented, 
+    inFile.totalTo_pay);               
     }
     fclose(pRents);
 
@@ -894,7 +874,6 @@ void removeAccounts(void){
     printf("\nRealizado com sucesso!");
 }
 
-
 void showAccounts(void){
     account inFile;
     int lineCounter = 0;
@@ -911,14 +890,12 @@ void showAccounts(void){
     while(fscanf(pAccounts, "%s %s %d %f", &inFile.name, &inFile.ic, &inFile.amountOf_rents, &inFile.moneyTo_pay) != EOF){
         lineCounter++;
 
-        printf("\n\n\t\t%d) Nome: %s - Documento Id: %s - Alugueis: %d - Valor Total á pagar: R$%.2f", 
-        lineCounter, inFile.name, inFile.ic, inFile.amountOf_rents, inFile.moneyTo_pay);
+     printf("\n\n\t\t%d) Nome: %s - Documento Id: %s - Alugueis: %d - Valor Total á pagar: R$%.2f", 
+     lineCounter, inFile.name, inFile.ic, inFile.amountOf_rents, inFile.moneyTo_pay);
     }
     fclose(pAccounts);
-
     printf("\n\nPressione [ENTER] p/ continuar...");
 }
-
 
 void removeBooks(void){
     book inFile;
@@ -938,9 +915,9 @@ void removeBooks(void){
     while(fscanf(pBooks, "%s %s %s %s %f", &inFile.title, &inFile.author,&inFile.genres, &inFile.date, &inFile.rentValue_perDay) != EOF){
         lineCounter++;        
         printf("\n\n\t\t\t%d) Título: %s - Autor: %s", lineCounter, inFile.title, inFile.author);    
-    }    
+    }   
+	
     fclose(pBooks);
-
     printf("\n\nInforme o n do Exemplar: ");    
     fgets(numInput, MAX_LEN, stdin);
     if((bookNum_toDelete = atoi(numInput)) == 0 || bookNum_toDelete > lineCounter){        
@@ -956,7 +933,6 @@ void removeBooks(void){
     pBooks = fopen(BOOKS_FPATH, "r");
     pTemp = fopen(TEMPF_PATH, "w");
     lineCounter = 0; 
-
     while(fscanf(pBooks, "%s %s %s %s %f", &inFile.title, &inFile.author, &inFile.genres, &inFile.date, &inFile.rentValue_perDay) != EOF){
         lineCounter++; 
         
@@ -966,13 +942,10 @@ void removeBooks(void){
             inFile.genres, inFile.date, inFile.rentValue_perDay);
         }
     }    
-
     fclose(pBooks);
     fclose(pTemp);
-
     remove(BOOKS_FPATH);
     rename(TEMPF_PATH, BOOKS_FPATH);
-
     printf("\nRealizado com sucesso!!");
 }
 
@@ -991,13 +964,12 @@ void showBooks(void){
 
     pBooks = fopen(BOOKS_FPATH, "r");
     while(fscanf(pBooks, "%s %s %s %s %f", &inFile.title, &inFile.author, &inFile.genres, &inFile.date, &inFile.rentValue_perDay) != EOF){
-        lineCounter++;
-        printf("\n\n%d) Título: %s - Autor: %s - Gênero: %s - Data: %s - Aluguel: R$%.2f", 
-        lineCounter, inFile.title, inFile.author, inFile.genres, inFile.date, 
-        inFile.rentValue_perDay);
+    lineCounter++;
+    printf("\n\n%d) Título: %s - Autor: %s - Gênero: %s - Data: %s - Aluguel: R$%.2f", 
+    lineCounter, inFile.title, inFile.author, inFile.genres, inFile.date, 
+    inFile.rentValue_perDay);
     }
     fclose(pBooks);
-
     printf("\n\nPressione [ENTER] p/ continuar.");
 }
 
@@ -1064,7 +1036,6 @@ void loadAnima() {
           branco();
           break;
       }
-
       printf("~");
       printf("* * * * * * * * ~ . ");
       branco();
@@ -1076,7 +1047,6 @@ void loadAnima() {
     system("cls");
   }
 }
-
 
 void bege (void){
 	
@@ -1117,5 +1087,3 @@ void laranja (void)
 {
      printf("\033[33m");	
 };
-
-
